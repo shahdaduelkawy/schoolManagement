@@ -11,9 +11,9 @@ const dbConnection = require('./config/db');
 
 //Routes
 const authRoute = require('./routes/authRoute');
-const SchoolRoute = require('./routes/SchoolRoute');
-const classRoomRoute = require('./routes/classRoomRoute');
-const StudentRoute = require('./routes/StudentRoute');
+const SchoolRoute = require('../routes/SchoolRoute');
+const classRoomRoute = require('../routes/classRoomRoute');
+const StudentRoute = require('../routes/StudentRoute');
 
 
 // connect db
