@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.get('/', (req,res) => {
-  res.send('App running running on port 8000')
+  res.send('App running on port 8000')
 })
 
 // Mount Routes
