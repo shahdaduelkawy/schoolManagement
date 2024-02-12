@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.get('/', (req,res) => {
-  res.send('Express vercel app response')
+  res.send('Express vercel app workk')
 })
 
 // Mount Routes
