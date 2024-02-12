@@ -16,11 +16,11 @@ const {
   addMediaArray,
 } = require("../services/SchoolService");
 
-const authService = require("../services/authService");
+//const authService = require("../services/authService");
 
 const router = express.Router();
 
-router.use(authService.protect);
+//router.use(authService.protect);
 
 // Admin
 //router.use(authService.allowedTo("superAdmin"));
