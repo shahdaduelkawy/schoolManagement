@@ -21,7 +21,7 @@ const authService = require("../services/authService");
 const router = express.Router();
 
 router.use(authService.protect);
-
+router.route("/").get(getSchool)
 // Admin
 router.use(authService.allowedTo("superAdmin"));
 router.route("/").get(getSchool).post(createSchoolValidator, createSchool);
