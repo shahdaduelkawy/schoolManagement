@@ -31,6 +31,10 @@ if (process.env.NODE_ENV === 'development') {
   console.log(`mode: ${process.env.NODE_ENV}`);
 }
 
+app.get('/', (req,res) => {
+  res.send('Express vercel app response')
+})
+
 // Mount Routes
 app.use('/School', SchoolRoute);
 app.use('/auth', authRoute);
