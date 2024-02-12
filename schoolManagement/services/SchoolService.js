@@ -61,3 +61,17 @@ exports.searchschoolByName = async (req, res) => {
       return res.status(500).json({ status: 'error', error: "Internal Server Error" });
     }
   };
+  exports.addMediaArray = async (schoolId, mediaArray) => {
+    try {
+      const school = await School.findByIdAndUpdate(
+        schoolId,
+        { $push: { media: { $each: mediaArray } } },
+        { new: true }
+      );
+  
+      return school;
+    } catch (error) {
+      console.error('Error adding media array to School:', error);
+      throw error;
+    }
+  };

@@ -32,11 +32,7 @@ const SchoolSchema = new mongoose.Schema(
       type: String,
       lowercase: true,
     },
-      // superAdminId: {
-      //   type: mongoose.Schema.Types.ObjectId,
-      //   ref: "User",
-      //   required: [false, "superAdmin must be associated with the school"],
-      // },
+     
     media: {
       type: [String],
       required: false,
@@ -50,22 +46,7 @@ const SchoolSchema = new mongoose.Schema(
 );
 
 
-// SchoolSchema.post("save", async (doc, next) => {
-//   if (doc.role === "classRoom") {
-//     try {
-//       // eslint-disable-next-line global-require
-//       const classRoom = require("./classRoomModel");
-//       await classRoom.create({
-//         name: "Classroom Name",
-//         schoolId: doc._id,
-        
-//       });
-//     } catch (err) {
-//       console.error("Error creating business owner:", err);
-//     }
-//   }
-//   next();
-// });
+
 const SchoolModel = mongoose.model("School", SchoolSchema);
 
 module.exports = SchoolModel;
