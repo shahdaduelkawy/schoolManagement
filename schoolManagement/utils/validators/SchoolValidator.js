@@ -9,7 +9,7 @@ exports.createSchoolValidator = [
     .notEmpty()
     .withMessage('school name required')
     .isLength({ min: 3 })
-    .withMessage('Too short User name'),
+    .withMessage('Too school User name'),
 
 
   validatorMiddleware,

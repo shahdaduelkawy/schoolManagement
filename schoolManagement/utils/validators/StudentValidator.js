@@ -3,11 +3,11 @@ const { check } = require('express-validator');
 const validatorMiddleware = require('../../middleware/validatorMiddleware');
 
 exports.createStudentValidator = [
-  check('name')
+  check('studentName')
     .notEmpty()
-    .withMessage('Admin name required')
+    .withMessage('student studentName required')
     .isLength({ min: 3 })
-    .withMessage('Too short User name')
+    .withMessage('Too short student studentName')
     .custom((val, { req }) => {
       req.body.slug = slugify(val);
       return true;

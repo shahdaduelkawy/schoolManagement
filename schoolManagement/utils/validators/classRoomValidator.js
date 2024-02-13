@@ -5,9 +5,9 @@ const validatorMiddleware = require('../../middleware/validatorMiddleware');
 exports.createclassRoomValidator = [
   check('name')
     .notEmpty()
-    .withMessage('Admin name required')
+    .withMessage('classRoom name required')
     .isLength({ min: 3 })
-    .withMessage('Too short User name')
+    .withMessage('Too short classRoom name')
     .custom((val, { req }) => {
       req.body.slug = slugify(val);
       return true;
